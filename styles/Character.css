@@ -1,0 +1,31 @@
+.shinchan
+{
+    position: absolute;
+    margin-left: 10%;
+    bottom:20%;
+    background:url("../resources/characters/character.png");
+    width: 200px;
+    height:256px;
+    animation: walk 1s steps(8) infinite ;
+}
+@keyframes walk{
+    0%
+    {
+        background-position: 3%; 
+    }
+    100%
+    {
+        background-position: -151%; 
+    }
+}
+/* @keyframes forward
+{
+    0%
+    {
+        transform: translateX(-100px);
+    }
+    100%
+    {
+        transform: translateX(800px);
+    }
+} */
