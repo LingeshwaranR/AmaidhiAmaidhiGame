@@ -1,0 +1,5 @@
+.background-move {
+    height: 200vh;
+    width: 100%;
+    background: url("../resources/background/Background.png") repeat-x left top;
+}
