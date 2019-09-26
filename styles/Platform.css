@@ -1,7 +1,9 @@
 .platform {
+    display: flex;
+    flex-direction: row;
     position: absolute;
-    top:80%;
-    height: 900px;
+    top: 63%;
+    height: 300px;
     width: 100%;
-    background: url("https://3.bp.blogspot.com/-RaXRORrsW6A/UZ0DfivwEhI/AAAAAAAAAcg/NJj1oL4uRE4/s320/Forest_Repeatable_Background.jpg") repeat-x left top;
-  }
+    background: url("../resources/platform/platform-with-grass.png") repeat-x left top;
+}
