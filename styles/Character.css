@@ -6,7 +6,45 @@
     background:url("../resources/characters/character.png");
     width: 200px;
     height:256px;
+}
+
+.animate{
     animation: walk 1s steps(8) infinite ;
+}
+
+.move-up-and-down{
+    animation:move-up-and-down linear 1s;
+}
+
+.jump{
+    animation:jump linear 1s;
+}
+
+@keyframes jump{
+    0%{
+        bottom:17%;
+    }
+    50%{
+        bottom:50%;
+    }
+    100%{
+        bottom:17%;
+    }
+}
+
+@keyframes move-up-and-down{
+    0%{
+        bottom:17%;
+    }
+    25%{
+        margin-left:8%;
+    }
+    50%{
+        bottom:40%;
+    }
+    100%{
+        bottom:-50%;
+    }
 }
 @keyframes walk{
     0%
