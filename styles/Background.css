@@ -35,6 +35,9 @@
     animation-play-state: running;
 
 }
+body{
+    overflow: hidden;
+}
 @keyframes pm {
     0% {
         top: 0;

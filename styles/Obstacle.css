@@ -1,0 +1,8 @@
+canvas {
+    background-color:rgba(red, green, blue, 0);
+    position: absolute;
+    bottom:17%;
+    left:17%;
+    right:0;
+    height:100%;
+}
