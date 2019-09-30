@@ -8,6 +8,32 @@
     height:256px;
 }
 
+#pause{
+    position: absolute;
+    margin-left: 5%;
+    bottom:2%;
+    width: 100px;
+    height:100px;
+}
+
+#play{
+    position: absolute;
+    margin-left: 5%;
+    bottom:2%;
+    width: 100px;
+    height:100px;
+    display: none;
+}
+
+#score{
+    position: absolute;
+    font-family: 'Press Start 2P';
+    top:1%;
+    right:5%;
+    font-size: 50px;
+
+}
+
 .animate{
     animation: walk 1s steps(8) infinite ;
 }

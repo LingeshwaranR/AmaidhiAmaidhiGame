@@ -1,0 +1,45 @@
+.game-over {
+    background-image: url("../resources/background/sun.gif");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    display: none;
+}
+
+.over {
+    font-family: 'Press Start 2P';
+    text-align: center;
+    font-size: 30px;
+    font-weight: 100;
+    position: absolute;
+    top:35%;
+    left:30%;   
+}
+
+.restart-btn {
+    font-family: 'Press Start 2P';
+    text-align: center;
+    font-size: 30px;
+    font-weight: 100;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: black;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: rgb(151, 147, 147);
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    box-shadow: 0 .2em rgb(151, 145, 145);
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+}
+
+.restart-btn:active {
+    box-shadow: none;
+    position: relative;
+    top: .2em;
+}
