@@ -1,5 +1,5 @@
-var bgm = "../resources/sound/bgm.mp3";
-var sword = "../resources/sound/sword.mp3"
+var bgm = "bgm.mp3";
+var sword = "sword.mp3"
 
 var bgmAudioObject = new Audio(bgm);
 

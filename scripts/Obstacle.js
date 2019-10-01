@@ -244,8 +244,8 @@ $("#play").on("click", () => {
     $("#pause").show()
 })
 
-var jump = "../resources/sound/jump.mp3"
-var sword = "../resources/sound/sword.mp3"
+var jump = "jump.mp3"
+var sword = "sword.mp3"
 
 function playSound(path) {
     var audioObject = new Audio(path);
