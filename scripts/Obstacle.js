@@ -9,6 +9,7 @@ function restartGame() {
 
 function startGame() {
     localStorage.setItem("pause", "false")
+    localStorage.setItem("gameOver","false")
     $(".buttons").hide()
     $(".loading").show()
     setInterval(() => {
@@ -80,17 +81,18 @@ function updateGameArea() {
         if (myGamePiece.crashWith(myObstacles[i])) {
             $(".shinchan").removeClass("animate")
             $(".shinchan").addClass("move-up-and-down")
+            localStorage.setItem("gameOver","true")
             setInterval(() => {
                 $(".shinchan").hide()
                 myGameArea.clear()
                 setInterval(() => {
                     $(".background-container").hide()
-                    if(localStorage.getItem("highScore")==undefined){
-                        localStorage.setItem("highScore",parseInt($("#score").text()))
+                    if (localStorage.getItem("highScore") == undefined) {
+                        localStorage.setItem("highScore", parseInt($("#score").text()))
                     }
-                    else{
-                        if(localStorage.getItem("highScore") < parseInt($("#score").text())){
-                            localStorage.setItem("highScore",parseInt($("#score").text()))
+                    else {
+                        if (localStorage.getItem("highScore") < parseInt($("#score").text())) {
+                            localStorage.setItem("highScore", parseInt($("#score").text()))
                         }
                     }
                     $("#high-score").text(localStorage.getItem("highScore"))
@@ -136,6 +138,9 @@ function clearmove() {
 }
 
 window.addEventListener('keydown', function (event) {
+    if(localStorage.getItem("gameOver")=="true"){
+        return;
+    }
     switch (event.keyCode) {
         case 65:
             if (myObstacles[0].color == "red") {
