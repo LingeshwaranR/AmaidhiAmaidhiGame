@@ -158,7 +158,6 @@ function updateGameArea() {
         myObstacles[i].x += -1;
         myObstacles[i].update();
     }
-    $("#score").text(parseInt($("#score").text()) + 1);
     myGamePiece.newPos();
     myGamePiece.update();
 }
@@ -177,12 +176,16 @@ window.addEventListener('keydown', function(event) {
     if (localStorage.getItem("gameOver") == "true") {
         return;
     }
+    var glow = document.getElementById("glow1");
+
     switch (event.keyCode) {
         case 65:
             if (myObstacles[0].color == "#eb4034") {
                 var firstObstacle = myObstacles.shift()
                 firstObstacle.x += 100;
                 playSound(sword)
+                $("#score").text(parseInt($("#score").text()) + 1);
+
             }
             break;
 
@@ -191,6 +194,7 @@ window.addEventListener('keydown', function(event) {
                 var firstObstacle = myObstacles.shift()
                 firstObstacle.x += 100;
                 playSound(sword)
+                $("#score").text(parseInt($("#score").text()) + 1);
             }
             break;
 
@@ -199,6 +203,7 @@ window.addEventListener('keydown', function(event) {
                 var firstObstacle = myObstacles.shift()
                 firstObstacle.x += 100;
                 playSound(sword)
+                $("#score").text(parseInt($("#score").text()) + 1);
             }
             break;
 
@@ -207,6 +212,7 @@ window.addEventListener('keydown', function(event) {
                 var firstObstacle = myObstacles.shift()
                 firstObstacle.x += 100;
                 playSound(sword)
+                $("#score").text(parseInt($("#score").text()) + 1);
             }
             break;
         case 32:
@@ -243,5 +249,4 @@ var sword = "../resources/sound/sword.mp3"
 function playSound(path) {
     var audioObject = new Audio(path);
     audioObject.play();
-} >>>
->>> > 6 da0c41276003a55eed36cf106090b36f8e129c0
+}

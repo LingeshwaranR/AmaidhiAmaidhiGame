@@ -5,7 +5,6 @@
 
 .game-over {
     background-image: url("../resources/background/sun.gif");
-    opacity: 0.9;
     background-size: cover;
     background-position: center center;
     height: 100%;
@@ -15,12 +14,14 @@
 .over {
     font-family: ninja;
     text-align: center;
+    background-color: rgb(0,0,0,0.6);
+    color: aliceblue;
     font-size: 50px;
     margin:0;
     font-weight: 600;
     position: absolute;
-    top:0%;
-    left:35%;   
+    top:5%;
+    left:33%;   
 }
 
 .over p{
