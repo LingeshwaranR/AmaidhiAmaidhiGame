@@ -9,6 +9,7 @@ function restartGame() {
 
 function startGame() {
     localStorage.setItem("pause", "false")
+    localStorage.setItem("gameOver", "false")
     $(".buttons").hide()
     $(".loading").show()
     setInterval(() => {
@@ -117,6 +118,7 @@ function updateGameArea() {
         if (myGamePiece.crashWith(myObstacles[i])) {
             $(".shinchan").removeClass("animate")
             $(".shinchan").addClass("move-up-and-down")
+            localStorage.setItem("gameOver", "true")
             setInterval(() => {
                 $(".shinchan").hide()
                 myGameArea.clear()
@@ -172,6 +174,9 @@ function clearmove() {
 }
 
 window.addEventListener('keydown', function(event) {
+    if (localStorage.getItem("gameOver") == "true") {
+        return;
+    }
     switch (event.keyCode) {
         case 65:
             if (myObstacles[0].color == "#eb4034") {
@@ -238,4 +243,5 @@ var sword = "../resources/sound/sword.mp3"
 function playSound(path) {
     var audioObject = new Audio(path);
     audioObject.play();
-}
+} >>>
+>>> > 6 da0c41276003a55eed36cf106090b36f8e129c0
