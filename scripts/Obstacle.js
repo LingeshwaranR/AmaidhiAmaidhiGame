@@ -177,7 +177,7 @@ window.addEventListener('keydown', function(event) {
         return;
     }
     var glow = document.getElementById("glow1");
-
+    if(myObstacles[0].x<=130){
     switch (event.keyCode) {
         case 65:
             if (myObstacles[0].color == "#eb4034") {
@@ -222,6 +222,7 @@ window.addEventListener('keydown', function(event) {
                 $(".shinchan").removeClass("jump")
             }, 1100)
     }
+}
 }, false);
 
 $("#pause").on("click", () => {
