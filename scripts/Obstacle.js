@@ -122,7 +122,6 @@ function updateGameArea() {
         myObstacles[i].x += -1;
         myObstacles[i].update();
     }
-    $("#score").text(parseInt($("#score").text()) + 1);
     myGamePiece.newPos();
     myGamePiece.update();
 }
@@ -147,6 +146,7 @@ window.addEventListener('keydown', function (event) {
                 var firstObstacle = myObstacles.shift()
                 firstObstacle.x += 100;
                 playSound(sword)
+                $("#score").text(parseInt($("#score").text()) + 1);
             }
             break;
 
@@ -155,6 +155,7 @@ window.addEventListener('keydown', function (event) {
                 var firstObstacle = myObstacles.shift()
                 firstObstacle.x += 100;
                 playSound(sword)
+                $("#score").text(parseInt($("#score").text()) + 1);
             }
             break;
 
@@ -163,6 +164,7 @@ window.addEventListener('keydown', function (event) {
                 var firstObstacle = myObstacles.shift()
                 firstObstacle.x += 100;
                 playSound(sword)
+                $("#score").text(parseInt($("#score").text()) + 1);
             }
             break;
 
@@ -171,6 +173,7 @@ window.addEventListener('keydown', function (event) {
                 var firstObstacle = myObstacles.shift()
                 firstObstacle.x += 100;
                 playSound(sword)
+                $("#score").text(parseInt($("#score").text()) + 1);
             }
             break;
         case 32:

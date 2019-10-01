@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="./styles/Obstacle.css">
     <link rel="stylesheet" href="./styles/Start.css">
     <link rel="stylesheet" href="./styles/GameOver.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles/About.css">
+    <title>Amaidhi</title>
 </head>
 
 <body>
@@ -23,7 +24,7 @@
         <img src="./resources/background/amaidhi_text.png" alt="" srcset="" id="amaidhi-text">
         <div class="buttons">
             <span class='start-btn' onclick="startGame()">START</span><br>
-            <span class='start-btn'>ABOUT</span><br>
+            <span class='start-btn' onclick="about()">ABOUT</span><br>
             <span class='start-btn' onclick="muteAll()" id="mute-button">MUTE</span>
         </div>
         <div class="loading">
@@ -39,6 +40,20 @@
             <h3 id="score">0</h3>
             <img src="./resources/platform/pause.png" id="pause">
             <img src="./resources/platform/play.png" id="play">
+        </div>
+    </div>
+    <div class="about">
+        <div class="text">
+        <h4>Welcome to Ninja Land...</h4><br>
+        <p>Shinchan has went out for an adventure,<br> but unfortunately he was trapped in a far away ninja land</p>
+        <p>The ninja land throws random colored obstacles to the opponent</p>
+        <p>Help him get out of the ninja land</p><br>
+        <h4>Controls</h4>
+        <p>Press A to avoid red color obstacles</p>
+        <p>Press S to avoid green color obstacles</p>
+        <p>Press D to avoid blue color obstacles</p>
+        <p>Press F to avoid orange color obstacles</p>
+        <span class='restart-btn' onclick="restartGame()">GO BACK</span>
         </div>
     </div>
     <div class="game-over">
@@ -62,5 +77,5 @@
 <script src="./scripts/Background.js"></script>
 <script src="./scripts/Character.js"></script>
 <script src="./scripts/Obstacle.js"></script>
-
+<script src="./scripts/About.js"></script>
 </html>
