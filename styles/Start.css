@@ -1,0 +1,84 @@
+.start {
+    background-image: url("../resources/background/sun.gif");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+}
+
+.buttons {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+}
+
+#amaidhi-text {
+    position: relative;
+    top:0;
+    left:5%;
+}
+
+.loading {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    font-family: 'Press Start 2P';
+    text-align: center;
+    font-size: 30px;
+    font-weight: 100;
+    display: none;
+}
+
+.start-btn {
+    font-family: 'Press Start 2P';
+    text-align: center;
+    font-size: 30px;
+    font-weight: 100;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: black;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: rgb(151, 147, 147);
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    box-shadow: 0 .2em rgb(151, 145, 145);
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+}
+
+.start-btn:active {
+    box-shadow: none;
+    position: relative;
+    top: .2em;
+}
+
+.hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 6px;
+    box-sizing: border-box;
+    border: 26px solid rgb(10, 1, 1);
+    border-color: rgb(10, 1, 1) transparent rgb(10, 1, 1) transparent;
+    animation: lds-hourglass 1.2s infinite;
+}
+
+@keyframes lds-hourglass {
+    0% {
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+        transform: rotate(900deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+        transform: rotate(1800deg);
+    }
+}
