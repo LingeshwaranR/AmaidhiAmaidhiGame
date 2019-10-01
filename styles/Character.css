@@ -1,3 +1,8 @@
+@font-face {
+    font-family: ninja;
+    src: url('../resources/fonts/kna__.ttf');
+  }
+
 .shinchan
 {
     position: absolute;
@@ -27,7 +32,7 @@
 
 #score{
     position: absolute;
-    font-family: 'Press Start 2P';
+    font-family: ninja;
     top:1%;
     right:5%;
     font-size: 50px;

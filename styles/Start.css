@@ -1,3 +1,8 @@
+@font-face {
+    font-family: ninja;
+    src: url('../resources/fonts/kna__.ttf');
+  }
+
 .start {
     background-image: url("../resources/background/sun.gif");
     background-size: cover;
@@ -20,8 +25,8 @@
 .loading {
     position: absolute;
     top: 40%;
-    left: 45%;
-    font-family: 'Press Start 2P';
+    left: 48%;
+    font-family: ninja;
     text-align: center;
     font-size: 30px;
     font-weight: 100;
@@ -29,7 +34,7 @@
 }
 
 .start-btn {
-    font-family: 'Press Start 2P';
+    font-family: ninja;
     text-align: center;
     font-size: 30px;
     font-weight: 100;
@@ -60,8 +65,8 @@
     content: " ";
     display: block;
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 50px;
+    height: 50px;
     margin: 6px;
     box-sizing: border-box;
     border: 26px solid rgb(10, 1, 1);

@@ -1,10 +1,9 @@
 .background-move {
     height: 100%;
     width: 100%;
-    background: url("../resources/background/Background.png") left top;
-    background-repeat: repeat-x;
+    background: url("../resources/background/NInja-Background.png") left top;
     background-position: bottom;
-    background-size: 100%;
+    background-size: 50%;
     position: absolute;
     bottom: 0px;
     box-sizing: border-box;
@@ -21,6 +20,7 @@
     animation-iteration-count: infinite;
     animation-play-state: running;
 }
+
 .background-sun {
     content: "";
     display: block;
@@ -33,37 +33,37 @@
     animation-direction: alternate;
     animation-iteration-count: infinite;
     animation-play-state: running;
-
 }
-body{
+
+body {
     overflow: hidden;
 }
+
 @keyframes pm {
     0% {
         top: 0;
         left: 0;
-   }
+    }
     100% {
         top: 400px;
         left: 50%;
-   }
+    }
 }
 
-
 @keyframes sunrise {
-   100% {
+    100% {
         background: #08082b;
-   }
+    }
     70% {
         background: orchid4;
-   }
+    }
     60% {
         background: DarkGoldenrod1;
-   }
+    }
     20% {
         background: gold;
-   }
+    }
     0% {
         background: #d4d4f7;
-   }
+    }
 }

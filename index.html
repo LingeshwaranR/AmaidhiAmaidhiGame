@@ -19,37 +19,43 @@
 </head>
 
 <body>
-        <div class="start" onclick="playBgm()">
-            <img src="./resources/background/amaidhi_text.png" alt="" srcset="" id="amaidhi-text">
-            <div class="buttons">
-                <span class='start-btn' onclick="startGame()">START</span><br>
-                <span class='start-btn'>ABOUT</span><br>
-                <span class='start-btn' onclick="muteAll()" id="mute-button">MUTE</span>
-            </div>
-            <div class="loading">
-                <h3>Loading...</h3>
-                <div class="hourglass"></div>
-            </div>
+    <div class="start" onclick="playBgm()">
+        <img src="./resources/background/amaidhi_text.png" alt="" srcset="" id="amaidhi-text">
+        <div class="buttons">
+            <span class='start-btn' onclick="startGame()">START</span><br>
+            <span class='start-btn'>ABOUT</span><br>
+            <span class='start-btn' onclick="muteAll()" id="mute-button">MUTE</span>
         </div>
-        <div class="background-container">
-            <div class="background-sun"></div>
-            <div class="background-move">
-                <div class="shinchan animate"></div>
-                <div class="platform"></div>
-                <h3 id="score">0</h3>
-                <img src="./resources/platform/pause.png" id="pause">
-                <img src="./resources/platform/play.png" id="play">
-            </div>
+        <div class="loading">
+            <h3>Loading...</h3>
+            <div class="hourglass"></div>
         </div>
-        <div class="game-over">
-            <div class="over">
-                <h1>GameOver :-(</h1><br>
-                <h4>Your Score is : </h4>
-                <h4 id="final-score">0</h4>
+    </div>
+    <div class="background-container">
+        <div class="background-sun"></div>
+        <div class="background-move">
+            <div class="shinchan animate"></div>
+            <div class="platform"></div>
+            <h3 id="score">0</h3>
+            <img src="./resources/platform/pause.png" id="pause">
+            <img src="./resources/platform/play.png" id="play">
+        </div>
+    </div>
+    <div class="game-over">
+        <div class="over">
+            <h4>GameOver :-(</h4><br>
+            <div style="display: flex;justify-content: space-between">
+                <div style="margin-right: 50px">
+            <p>Your Score </p>
+            <p id="final-score">0</p>
             </div>
-            <div class="buttons">
-                <span class='restart-btn' onclick="startGame()">RESTART</span>
+            <div>
+            <p>High Score </p>
+            <p id="high-score">0</p><br>
             </div>
+            </div>
+            <span class='restart-btn' onclick="restartGame()">RESTART</span>
+        </div>
     </div>
 </body>
 <script src="./scripts/Platform.js"></script>

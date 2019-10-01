@@ -1,8 +1,14 @@
 var myGamePiece;
 var myObstacles = [];
-var pause=false;
+var pause = false;
+
+function restartGame() {
+    localStorage.setItem("pause", "false")
+    location.reload()
+}
 
 function startGame() {
+    localStorage.setItem("pause", "false")
     $(".buttons").hide()
     $(".loading").show()
     setInterval(() => {
@@ -66,7 +72,7 @@ function component(width, height, color, x, y, name) {
 }
 
 function updateGameArea() {
-    if(pause){
+    if (pause) {
         return;
     }
     var x, height, gap, minHeight, maxHeight, minGap, maxGap;
@@ -76,11 +82,22 @@ function updateGameArea() {
             $(".shinchan").addClass("move-up-and-down")
             setInterval(() => {
                 $(".shinchan").hide()
-                $(".background-container").hide()
                 myGameArea.clear()
-                $("#final-score").text($("#score").text())
-                $(".game-over").show()
-            }, 1200)
+                setInterval(() => {
+                    $(".background-container").hide()
+                    if(localStorage.getItem("highScore")==undefined){
+                        localStorage.setItem("highScore",parseInt($("#score").text()))
+                    }
+                    else{
+                        if(localStorage.getItem("highScore") < parseInt($("#score").text())){
+                            localStorage.setItem("highScore",parseInt($("#score").text()))
+                        }
+                    }
+                    $("#high-score").text(localStorage.getItem("highScore"))
+                    $("#final-score").text($("#score").text())
+                    $(".game-over").show()
+                }, 1000)
+            }, 2200)
             myGameArea.stop();
             return;
         }
@@ -160,19 +177,20 @@ window.addEventListener('keydown', function (event) {
     }
 }, false);
 
-$("#pause").on("click",()=>{
-    document.getElementsByClassName("background-container")[0].style.backgroundColor="#fff";
-    document.getElementsByClassName("background-container")[0].style.opacity=0.4;
-    
-    pause=true;
+$("#pause").on("click", () => {
+    document.getElementsByClassName("background-container")[0].style.backgroundColor = "#fff";
+    document.getElementsByClassName("background-container")[0].style.opacity = 0.4;
+    pause = true;
+    localStorage.setItem("pause", "true")
     $(".shinchan").removeClass("animate")
     $("#pause").hide()
     $("#play").show()
 })
-$("#play").on("click",()=>{
-    document.getElementsByClassName("background-container")[0].style.backgroundColor="#d4d4f7";
-    document.getElementsByClassName("background-container")[0].style.opacity=1;
-    pause=false;
+$("#play").on("click", () => {
+    document.getElementsByClassName("background-container")[0].style.backgroundColor = "#d4d4f7";
+    document.getElementsByClassName("background-container")[0].style.opacity = 1;
+    pause = false;
+    localStorage.setItem("pause", "false")
     $(".shinchan").addClass("animate")
     $("#play").hide()
     $("#pause").show()

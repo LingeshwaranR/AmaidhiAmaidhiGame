@@ -1,5 +1,11 @@
+@font-face {
+    font-family: ninja;
+    src: url('../resources/fonts/kna__.ttf');
+  }
+
 .game-over {
     background-image: url("../resources/background/sun.gif");
+    opacity: 0.9;
     background-size: cover;
     background-position: center center;
     height: 100%;
@@ -7,17 +13,21 @@
 }
 
 .over {
-    font-family: 'Press Start 2P';
+    font-family: ninja;
     text-align: center;
-    font-size: 30px;
-    font-weight: 100;
+    font-size: 50px;
+    margin:0;
+    font-weight: 600;
     position: absolute;
-    top:35%;
-    left:30%;   
+    top:0%;
+    left:35%;   
 }
 
+.over p{
+    font-family: ninja;
+}
 .restart-btn {
-    font-family: 'Press Start 2P';
+    font-family: ninja;
     text-align: center;
     font-size: 30px;
     font-weight: 100;
